@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Day Surprise! 🧸</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3e6;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #8b5a2b;
+            font-size: 3em;
+            display: none;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .teddy {
+            font-size: 10em;
+            margin-top: 20px;
+            display: none;
+            animation: bounce 2s infinite;
+        }
+
+        .surprise-btn {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .surprise-btn:hover {
+            background-color: #d9534f;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="surprise-btn" onclick="showSurprise()">Click for a Surprise! 🎁</button>
+
+    <h1 id="teddy-text">Happy Teddy Day! 🧸</h1>
+    <div class="teddy" id="teddy">🧸</div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById("teddy-text").style.display = "block";
+            document.getElementById("teddy").style.display = "block";
+            document.querySelector(".surprise-btn").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
